@@ -1,6 +1,11 @@
 [package]
-name = "ganeet"
+name = "ganit"
 version = "0.1.0"
 edition = "2024"
-
+description = "Provides mathematical functions, linear algebra, stats etc."
+license = "MIT"
+repository = "https://github.com/gagan405/ganit"
+documentation = "https://docs.rs/your_crate"
+keywords = ["math", "statistics"]
+readme = "README.md"
 [dependencies]
