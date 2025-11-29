@@ -1,6 +1,6 @@
 [package]
 name = "ramanujan"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Provides mathematical functions, linear algebra, stats etc."
 license = "MIT"
