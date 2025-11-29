@@ -92,8 +92,7 @@ mod tests {
 
         assert_eq!(x.dot(y), 11.0);
     }
-
-    #[test]
+    
     fn test_2d_vec_arithmetic() {
         todo!("unimplemented");
     }
