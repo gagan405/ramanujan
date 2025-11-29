@@ -9,3 +9,4 @@ documentation = "https://docs.rs/ramanujan"
 keywords = ["math", "statistics"]
 readme = "README.md"
 [dependencies]
+proptest = "1.9.0"
