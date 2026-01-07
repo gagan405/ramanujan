@@ -1,5 +1,11 @@
 use std::ops::{Add, Mul, Sub};
 
+
+#[derive(Debug, PartialEq)]
+pub enum VectorError {
+    DimensionMismatch,
+}
+
 // ---------------------------
 // Fixed-size generic 2D vector
 // ---------------------------
@@ -7,11 +13,6 @@ use std::ops::{Add, Mul, Sub};
 pub struct Vec2<T> {
     pub x: T,
     pub y: T,
-}
-
-#[derive(Debug, PartialEq)]
-pub enum VectorError {
-    DimensionMismatch,
 }
 
 impl<T> Vec2<T>

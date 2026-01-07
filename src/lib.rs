@@ -1,1 +1,2 @@
 mod linalg;
+mod arith;
