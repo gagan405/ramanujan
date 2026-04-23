@@ -1,4 +1,4 @@
-use std::ops::{Add, Mul, Sub};
+use std::ops::{Add, Index, Mul, Sub};
 
 #[derive(Debug, PartialEq)]
 pub enum VectorError {
@@ -170,6 +170,13 @@ where
     }
 }
 
+impl<T> Index<usize> for DVec<T> {
+    type Output = T;
+    fn index(&self, i: usize) -> &T {
+        &self.data[i]
+    }
+}
+
 impl<T> Add for DVec<T>
 where
     T: Copy + Add<Output = T> + Mul<Output = T> + Sub<Output = T>,
@@ -295,5 +302,11 @@ mod tests {
         let y = DVec::new(vec![1.0, 2.0]);
 
         assert_eq!((&x + &y).unwrap_err(), VectorError::DimensionMismatch);
+    }
+
+    #[test]
+    fn test_dvec_index() {
+        let x = DVec::new(vec![1.0, 2.0, 3.0]);
+        assert_eq!(x[1], 2.0);
     }
 }
