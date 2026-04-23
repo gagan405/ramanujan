@@ -1,6 +1,5 @@
 use std::ops::{Add, Mul, Sub};
 
-
 #[derive(Debug, PartialEq)]
 pub enum VectorError {
     DimensionMismatch,
